@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 19th Birthday, Shirena ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Parisienne&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --pink: #f5bac9;
+  --cream: #fff0e9;
+  --dark: #160e16;
+  --wine: #63364a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--dark);
+  color: var(--cream);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+button, a { -webkit-tap-highlight-color: transparent; }
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 22px 5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  z-index: 5;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+nav span:first-child { color: var(--pink); }
+
+.hero {
+  min-height: 100vh;
+  padding: 100px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 35px;
+  background:
+    linear-gradient(90deg, #160e16eF, #160e1680),
+    url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=85')
+    center/cover;
+}
+
+.eyebrow {
+  color: var(--pink);
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font: 400 clamp(48px, 7vw, 90px)/1.05 'Playfair Display', serif;
+  margin: 22px 0;
+}
+
+h1 em { color: var(--pink); }
+
+.name {
+  font: clamp(30px, 4vw, 46px) 'Parisienne', cursive;
+  color: #ffd5df;
+  margin-bottom: 20px;
+}
+
+.intro {
+  max-width: 480px;
+  color: #f4e4e7;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+button, .download {
+  display: inline-block;
+  padding: 13px 20px;
+  margin: 15px 7px 0 0;
+  border: 1px solid var(--pink);
+  border-radius: 50px;
+  background: var(--pink);
+  color: #381c29;
+  text-decoration: none;
+  font: 600 12px 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover, .download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px #f5bac955;
+}
+
+.outline {
+  background: transparent;
+  color: white;
+}
+
+.photo-frame {
+  background: #fff6ef;
+  padding: 10px 10px 35px;
+  transform: rotate(1deg);
+  box-shadow: 0 20px 60px #0008;
+}
+
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photo-caption {
+  text-align: center;
+  color: var(--wine);
+  font: 24px 'Parisienne', cursive;
+  padding-top: 10px;
+}
+
+section { padding: 75px 7%; }
+
+.light {
+  background: #fff0eb;
+  color: #492c37;
+}
+
+.title {
+  text-align: center;
+  font: 400 clamp(32px, 5vw, 48px) 'Playfair Display', serif;
+  margin-bottom: 32px;
+}
+
+.letter {
+  max-width: 850px;
+  margin: auto;
+  padding: clamp(24px, 5vw, 50px);
+  background: #fffaf7;
+  border: 1px solid #efbdca;
+  border-radius: 8px;
+  line-height: 1.95;
+  box-shadow: 0 15px 45px #542b3512;
+}
+
+.letter p { margin-bottom: 17px; }
+
+.script {
+  font: 36px 'Parisienne', cursive;
+  color: #a25370;
+  margin-bottom: 20px;
+}
+
+.wishes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.wish {
+  padding: 23px;
+  border: 1px solid #ffffff20;
+  background: #ffffff08;
+  border-radius: 17px;
+  transition: .3s;
+}
+
+.wish:hover {
+  transform: translateY(-4px);
+  background: #ffffff12;
+}
+
+.wish h3 {
+  font: 22px 'Playfair Display', serif;
+  color: var(--pink);
+  margin-bottom: 10px;
+}
+
+.wish p {
+  font-size: 12px;
+  color: #ddcbd1;
+  line-height: 1.9;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.polaroid {
+  padding: 10px 10px 35px;
+  background: #fff7f0;
+  color: var(--wine);
+  box-shadow: 0 12px 35px #0003;
+}
+
+.polaroid img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.polaroid p {
+  font: 22px 'Parisienne', cursive;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.surprise {
+  max-width: 720px;
+  margin: auto;
+  padding: 35px 22px;
+  border: 1px solid #f5bac933;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.envelope {
+  font-size: 65px;
+  margin: 20px;
+  animation: float 3s infinite ease-in-out;
+}
+
+.hidden-message {
+  display: none;
+  margin: 22px auto 0;
+  max-width: 600px;
+  padding: 25px;
+  border-radius: 15px;
+  background: #fff0eb;
+  color: #492c37;
+  line-height: 1.9;
+}
+
+.hidden-message.show {
+  display: block;
+  animation: appear .6s ease;
+}
+
+.closing {
+  text-align: center;
+  padding: 100px 20px;
+  background:
+    linear-gradient(#160e1688, #160e16e8),
+    url('https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=1600&q=85')
+    center/cover;
+}
+
+.closing h2 {
+  font: clamp(42px, 7vw, 75px) 'Parisienne', cursive;
+  color: #ffd5df;
+  margin: 25px 0;
+}
+
+.closing p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.9;
+  font-size: 13px;
+}
+
+.signature {
+  font: 36px 'Parisienne', cursive;
+  color: var(--pink);
+  margin-top: 25px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #b895a1;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.heart {
+  position: fixed;
+  top: -30px;
+  pointer-events: none;
+  z-index: 99;
+  color: #ffb9cc;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width: 720px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .intro { margin: auto; }
+  .photo-frame { max-width: 550px; margin: 20px auto 0; }
+  .wishes { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: 1fr 1fr; }
+  .polaroid img { height: 180px; }
+  section { padding: 60px 6%; }
+}
+
+@media(max-width: 420px) {
+  .gallery { grid-template-columns: 1fr; }
+  .polaroid img { height: 250px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <span>♥ Untuk Kamu, Shirena ♡</span>
+  <span>22 · 10 · WITH LOVE</span>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="eyebrow">A little universe made for you</div>
+    <h1>Happy <em>19th</em><br>Birthday ♡</h1>
+    <div class="name">Shirena Ahzar Kadialoka</div>
+
+    <p class="intro">
+      “19 tahun bukan hanya tentang bertambahnya usia,
+      tetapi tentang semakin dekatnya kamu dengan
+      semua mimpi indahmu.”
+    </p>
+
+    <button onclick="scrollToSection('letter')">
+      ▶ Buka Surat Kecilku ♡
+    </button>
+
+    <button class="outline" onclick="makeHearts()">
+      Kirim Banyak Cinta ♥
+    </button>
+
+    <br>
+
+    <a class="download" id="downloadArt" download="desain-ulang-tahun-shirena.png">
+      ⬇ Download Gambar Desain
+    </a>
+  </div>
+
+  <div class="photo-frame">
+    <img id="mainArt"
+      src="shirenaa.jpg"
+      alt="Dekorasi ulang tahun">
+    <div class="photo-caption">A little memory for you ♡</div>
+  </div>
+</header>
+
+<section class="light" id="letter">
+  <h2 class="title">A Letter For You ♡</h2>
+
+  <div class="letter">
+    <div class="script">Untuk Shirena, sayangku...</div>
+
+    <p>Selamat ulang tahun yang ke-19,
+    Shirena Ahzar Kadialoka. 🤍🎂</p>
+
+    <p>Semoga panjang umur, sehat selalu,
+    dilancarkan rezekinya, dimudahkan segala
+    urusannya, dan selalu dikelilingi orang-orang
+    yang tulus menyayangimu.</p>
+
+    <p>Terima kasih sudah hadir dan membawa
+    warna indah dalam hidupku. Kamu membuat
+    hal-hal sederhana terasa lebih berarti.
+    Aku bersyukur bisa mengenal seseorang
+    seistimewa dirimu.</p>
+
+    <p>Di usia barumu ini, semoga semua impian
+    yang kamu perjuangkan satu per satu menjadi
+    kenyataan. Semoga setiap lelahmu berbuah
+    kebahagiaan, setiap kesulitan menemukan
+    jalan keluar, dan setiap doamu mendapat
+    jawaban terbaik dari Allah.</p>
+
+    <p>Kamu tidak harus selalu kuat. Kalau suatu
+    hari dunia terasa melelahkan, ingatlah bahwa
+    kamu berharga dan pantas mendapatkan
+    kebahagiaan. Teruslah menjadi dirimu sendiri,
+    karena ada banyak hal indah dalam dirimu.</p>
+
+    <p>Aku ingin terus belajar menghargaimu,
+    mendengarkan ceritamu, mendukung impianmu,
+    dan ikut bahagia melihatmu bertumbuh.</p>
+
+    <p>Semoga ulang tahun ke-19 ini menjadi
+    kenangan manis yang membuatmu tersenyum
+    setiap kali mengingatnya.</p>
+
+    <p class="script" style="text-align:right;margin-top:30px">
+      Dengan cinta, Alfi ♡
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2 class="title">Doa-doa Terbaik Untukmu ✨</h2>
+
+  <div class="wishes">
+    <div class="wish">
+      <h3>♡ Panjang Umur & Sehat</h3>
+      <p>Semoga Allah memanjangkan umurmu
+      dalam kebaikan, memberikan kesehatan
+      lahir dan batin, serta menjaga setiap
+      langkahmu.</p>
+    </div>
+
+    <div class="wish">
+      <h3>✧ Semua Impian Tercapai</h3>
+      <p>Semoga cita-citamu tercapai, usahamu
+      dimudahkan, rezekimu dilancarkan, dan
+      masa depanmu dipenuhi kesempatan baik.</p>
+    </div>
+
+    <div class="wish">
+      <h3>🌷 Selalu Bahagia</h3>
+      <p>Semoga senyummu selalu terjaga,
+      hatimu tenang, dan kamu menemukan
+      alasan untuk bersyukur setiap hari.</p>
+    </div>
+
+    <div class="wish">
+      <h3>☾ Dalam Lindungan Allah</h3>
+      <p>Semoga Allah menjagamu dari keburukan,
+      menguatkanmu ketika lelah, dan
+      mengabulkan doa-doa terbaikmu. Aamiin.</p>
+    </div>
+
+    <div class="wish">
+      <h3>∞ Cinta yang Bertumbuh</h3>
+      <p>Semoga kita saling menghargai,
+      menjaga kepercayaan, memahami satu
+      sama lain, dan mendukung dalam kebaikan.</p>
+    </div>
+
+    <div class="wish">
+      <h3>☀ Masa Depan Indah</h3>
+      <p>Semoga usia 19 menjadi awal dari banyak
+      cerita indah, pengalaman berharga,
+      dan pencapaian membanggakan.</p>
+    </div>
+  </div>
+</section>
+
+<section class="light">
+  <h2 class="title">Galeri Kenangan ♡</h2>
+
+  <div class="gallery">
+    <div class="polaroid">
+      <img src="kenangan1.jpg"alt="kenangan pertama">
+      <p>Senyummu ♡</p>
+    </div>
+
+    <div class="polaroid">
+      <img src="kenangan2.jpg.jpeg"alt="kenagan kedua">
+      <p>Hal sederhana</p>
+    </div>
+
+    <div class="polaroid">
+      <img src="kenangan3.jpg.jpeg"alt="kenangan ketiga">
+      <p>Senja bersamamu</p>
+    </div>
+  </div>
+
+  <p style="text-align:center;margin-top:25px;font-size:12px">
+    Ganti gambar contoh dengan foto kalian agar lebih personal.
+  </p>
+</section>
+
+<section>
+  <h2 class="title">One Last Surprise 💌</h2>
+
+  <div class="surprise">
+    <div class="envelope">💌</div>
+    <div class="script">Ada pesan khusus untukmu...</div>
+
+    <p>
+      Tekan tombol ini untuk membuka pesan
+      kecil yang kusimpan khusus untuk hari
+      istimewamu.
+    </p>
+
+    <button onclick="toggleSurprise()">Buka Kejutan ♡</button>
+
+    <div class="hidden-message" id="secret">
+      Shirena Ahzar Kadialoka, semoga panjang
+      umur dalam keberkahan, sehat selalu,
+      dimudahkan segala urusan, dan dikabulkan
+      doa-doa terbaikmu.
+
+      <br><br>
+
+      Semoga hal yang kamu takutkan perlahan
+      menjadi mudah, impianmu semakin dekat,
+      dan kamu selalu menemukan alasan
+      untuk tersenyum.
+
+      <br><br>
+
+      Terima kasih sudah menjadi bagian indah
+      dalam hidupku. Semoga kita terus saling
+      mendukung dan menciptakan kenangan
+      baik bersama.
+
+      <br><br>
+
+      <strong>You deserve all the beautiful things,
+      my love. ♡</strong>
+
+      <br><br>
+      Aamiin ya Rabbal alamin. 🤍
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="eyebrow">A new chapter begins</div>
+
+  <h2>Selamat Ulang Tahun,<br>Shirena ♡</h2>
+
+  <p>
+    Semoga usia 19 ini menjadi bab yang indah
+    dalam hidupmu. Teruslah bermimpi, tumbuh,
+    dan percaya pada dirimu sendiri. Semoga
+    Allah selalu menjagamu, hari ini, esok,
+    dan seterusnya.
+  </p>
+
+  <div class="signature">Dengan cinta, Alfi ♥</div>
+
+  <button onclick="makeHearts();window.scrollTo({top:0,behavior:'smooth'})">
+    Peluk Virtual Untukmu ♡
+  </button>
+</section>
+
+<footer>
+  MADE WITH LOVE · JUST FOR SHIRENA · HAPPY 19TH BIRTHDAY
+</footer>
+
+<script>
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+function toggleSurprise() {
+  document.getElementById("secret").classList.toggle("show");
+  makeHearts(20);
+}
+
+function makeHearts(amount = 35) {
+  const symbols = ["♡", "♥", "✿", "✧"];
+
+  for (let i = 0; i < amount; i++) {
+    const heart = document.createElement("span");
+
+    heart.className = "heart";
+    heart.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (14 + Math.random() * 22) + "px";
+    heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 8000);
+  }
+}
+
+/* Download gambar utama dari halaman.
+   Gambar harus sudah berhasil dimuat dan mengizinkan akses gambar lintas situs. */
+const mainArt = document.getElementById("mainArt");
+const downloadArt = document.getElementById("downloadArt");
+
+downloadArt.addEventListener("click", async function(event) {
+  event.preventDefault();
+
+  try {
+    const response = await fetch(mainArt.src);
+    if (!response.ok) throw new Error("Gambar tidak tersedia");
+
+    const blob = await response.blob();
+    const tempURL = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = tempURL;
+    link.download = "birthday-shirena-19.png";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    setTimeout(() => URL.revokeObjectURL(tempURL), 2000);
+  } catch (error) {
+    alert("Gambar tidak bisa diunduh otomatis dari sumber ini. Klik kanan gambar lalu pilih 'Save image as' atau ganti dengan gambar milikmu.");
+  }
+});
+</script>
+
+</body>
+</html>
